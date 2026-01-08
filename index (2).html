@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HALFMARATHON, SALATIGASEMUARUN!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <script src="script.js"></script>
+  </body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Salatiga Semua Run 2027</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-deep: #0288D1;      /* Biru Langit Tua */
+            --sky-main: #29B6F6;      /* Biru Langit Cerah */
+            --sky-light: #B3E5FC;     /* Biru Awan */
+            --white: #ffffff;
+            --accent-gold: #FFD700;   /* Emas untuk Prestasi */
+            --batik-opacity: 0.1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--sky-light);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* --- POLA BATIK PLUMPUNGAN (CSS GENERATED) --- */
+        /* Pola ini meniru motif geometris dasar Plumpungan (titik dan bentuk dasar) */
+        .batik-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: var(--sky-main);
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2) 10%, transparent 10%), 
+                radial-gradient(circle at 0% 0%, rgba(255,255,255,0.2) 10%, transparent 10%), 
+                radial-gradient(circle at 100% 0%, rgba(255,255,255,0.2) 10%, transparent 10%), 
+                radial-gradient(circle at 100% 100%, rgba(255,255,255,0.2) 10%, transparent 10%), 
+                radial-gradient(circle at 0% 100%, rgba(255,255,255,0.2) 10%, transparent 10%);
+            background-size: 60px 60px; /* Ukuran pola */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--white);
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.5);
+            font-weight: 700;
+        }
+
+        /* --- GLASSMORPHISM CARDS --- */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dekorasi Sudut Batik */
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, var(--sky-main) 20%, transparent 20%);
+            background-size: 20px 20px;
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+
+        .section-title {
+            color: var(--sky-deep);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--accent-gold);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .center-title-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* --- ROUTE MAP STYLING --- */
+        .route-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .checkpoint {
+            display: flex;
+            align-items: center;
+            background: #F0F9FF;
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 5px solid var(--sky-deep);
+            transition: transform 0.3s;
+        }
+
+        .checkpoint:hover {
+            transform: translateX(10px);
+            background: #E1F5FE;
+        }
+
+        .km-badge {
+            background: var(--sky-deep);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-right: 20px;
+            box-shadow: 0 4px 10px rgba(2, 136, 209, 0.4);
+            flex-shrink: 0;
+        }
+
+        .checkpoint-info h4 {
+            color: var(--sky-deep);
+            margin-bottom: 5px;
+        }
+
+        /* --- ICONIC FEATURES --- */
+        .iconic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .iconic-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .iconic-emoji {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* --- PACKAGES TABLE --- */
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .price-card {
+            flex: 1;
+            min-width: 280px;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .price-card.featured {
+            border-color: var(--accent-gold);
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .price-card.featured::after {
+            content: 'Recommended';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: #333;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .price-title {
+            color: var(--sky-deep);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .benefit-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .benefit-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .benefit-list li::before {
+            content: '✔';
+            color: var(--sky-main);
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        /* --- CTA BUTTON --- */
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--sky-deep), var(--sky-main));
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(2, 136, 209, 0.4);
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(2, 136, 209, 0.6);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .price-card.featured { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="batik-bg"></div>
+
+    <div class="container">
+        <header>
+            <div style="margin-bottom: 10px; font-weight: bold; letter-spacing: 3px;">HUT KOTA SALATIGA KE-1277</div>
+            <h1>SALATIGA<br>SEMUA RUN</h1>
+            <h2>HALF MARATHON 2027</h2>
+            
+            <div class="highlight-box">
+                🗓️ 11 - 12 JULI 2027 &nbsp;|&nbsp; 📍 START: KOREM 073/MAKUTARAMA
+            </div>
+            <br>
+            <br>
+            <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+                Event lari pertama yang memadukan kesejukan udara, tantangan elevasi, dan warisan budaya <em>De Schoonste Stad van Midden-Java</em>.
+            </p>
+        </header>
+
+        <div class="glass-card">
+            <div class="center-title-container">
+                <h3 class="section-title">The Spirit of Salatiga</h3>
+            </div>
+            <div class="iconic-grid">
+                <div class="iconic-item">
+                    <span class="iconic-emoji">🏙️</span>
+                    <h4>Heritage City</h4>
+                    <p>Berlari melewati bangunan kolonial bersejarah dan pusat kota yang ikonik.</p>
+                </div>
+                <div class="iconic-item">
+                    <span class="iconic-emoji">🌬️</span>
+                    <h4>Cool Climate</h4>
+                    <p>Suhu 20-24°C dengan angin sejuk, kondisi ideal untuk mencetak rekor lari baru (PB).</p>
+                </div>
+                <div class="iconic-item">
+                    <span class="iconic-emoji">⛰️</span>
+                    <h4>Mountain View</h4>
+                    <p>Pemandangan Gunung Merbabu yang megah menemani pelari di Jalur Lingkar Selatan.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <div class="center-title-container">
+                <h3 class="section-title">Rute 21K: The Loop</h3>
+                <p>Start & Finish di Jantung Kota: Jl. Diponegoro (Korem)</p>
+            </div>
+            
+            <div class="route-visual">
+                <div class="checkpoint">
+                    <div class="km-badge">START</div>
+                    <div class="checkpoint-info">
+                        <h4>Korem 073/Makutarama</h4>
+                        <p>Pusat keramaian di Jl. Diponegoro. Area Expo & Panggung Utama.</p>
+                    </div>
+                </div>
+
+                <div class="checkpoint">
+                    <div class="km-badge">KM 3</div>
+                    <div class="checkpoint-info">
+                        <h4>Bundaran Kalibiru & Sudirman</h4>
+                        <p>Jantung ekonomi kota Salatiga. Pelari disambut sorak sorai warga lokal di area pertokoan.</p>
+                    </div>
+                </div>
+
+                <div class="checkpoint">
+                    <div class="km-badge">KM 8</div>
+                    <div class="checkpoint-info">
+                        <h4>Jalan Lingkar Selatan (JLS)</h4>
+                        <p>Jalur lebar dan panjang dengan latar belakang Gunung Merbabu. Zona foto terbaik.</p>
+                    </div>
+                </div>
+
+                <div class="checkpoint">
+                    <div class="km-badge">KM 15</div>
+                    <div class="checkpoint-info">
+                        <h4>Tanjakan Blotongan</h4>
+                        <p>Tantangan elevasi khas Salatiga. Ujian ketahanan fisik sebelum kembali ke kota.</p>
+                    </div>
+                </div>
+
+                <div class="checkpoint">
+                    <div class="km-badge">FINISH</div>
+                    <div class="checkpoint-info">
+                        <h4>Victory at Diponegoro</h4>
+                        <p>Kembali ke Korem. Penyerahan medali bermotif Batik Plumpungan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <div class="center-title-container">
+                <h3 class="section-title">Kesempatan Kemitraan</h3>
+                <p>Tingkatkan eksposur brand Anda di hadapan 3.000+ pelari dan ribuan warga Salatiga.</p>
+            </div>
+
+            <div class="pricing-container">
+                <div class="price-card">
+                    <div class="price-title">SILVER</div>
+                    <p>Support Partner</p>
+                    <ul class="benefit-list">
+                        <li>Logo Kecil di Jersey</li>
+                        <li>Logo di Backdrop</li>
+                        <li>Booth 3x3m</li>
+                        <li>Disebut MC (Ad-libs)</li>
+                    </ul>
+                </div>
+
+                <div class="price-card featured">
+                    <div class="price-title">PLATINUM</div>
+                    <p>Title Sponsor</p>
+                    <ul class="benefit-list">
+                        <li><strong>Naming Rights Event</strong></li>
+                        <li>Logo Dada Utama Jersey</li>
+                        <li>Logo di Medali Plumpungan</li>
+                        <li>Booth VIP 6x6m</li>
+                        <li>Branding di Gate Start/Finish</li>
+                        <li>15 Slot Lari Gratis</li>
+                    </ul>
+                </div>
+
+                <div class="price-card">
+                    <div class="price-title">GOLD</div>
+                    <p>Official Partner</p>
+                    <ul class="benefit-list">
+                        <li>Logo Punggung Jersey</li>
+                        <li>Branding Water Station</li>
+                        <li>Booth Strategis 3x3m</li>
+                        <li>Social Media Blast</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <p>Tertarik menjadi bagian dari sejarah baru Salatiga?</p>
+                <a href="https://wa.me/6281234567890" class="cta-btn">Hubungi Kami via WhatsApp</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p><strong>SALATIGA SEMUA RUN 2027</strong></p>
+        <p>Sekretariat: Jl. Diponegoro, Salatiga, Jawa Tengah</p>
+        <p>&copy; 2027 Panitia Pelaksana. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Penutup - Salatiga Semua Run 2027</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Playfair+Display:ital,wght@1,600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-dark: #0277BD;
+            --sky-main: #29B6F6;
+            --sky-light: #E1F5FE;
+            --white: #ffffff;
+            --accent-gold: #FFD700;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--sky-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- BACKGROUND DECORATION --- */
+        .closing-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--sky-main), var(--sky-dark));
+            z-index: -1;
+        }
+
+        .plumpungan-watermark {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(255,255,255,0.1) 15%, transparent 16%);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+
+        /* --- CONTENT BOX --- */
+        .closing-container {
+            max-width: 800px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .tugu-icon-small {
+            width: 80px;
+            height: 80px;
+            background: var(--sky-main);
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--sky-dark);
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .closing-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .quote-box {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--sky-dark);
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 4px solid var(--accent-gold);
+            border-right: 4px solid var(--accent-gold);
+            background: #f0faff;
+        }
+
+        .hopes-section {
+            background: var(--sky-dark);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .hopes-section h3 {
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+        }
+
+        .hopes-list {
+            list-style: none;
+        }
+
+        .hopes-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hopes-list li::before {
+            content: '🔹';
+            margin-right: 10px;
+        }
+
+        .signature-final {
+            margin-top: 50px;
+        }
+
+        .signature-final p {
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
+        .btn-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: var(--accent-gold);
+            color: var(--sky-dark);
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .btn-home:hover {
+            transform: scale(1.05);
+            background: white;
+        }
+
+        @media (max-width: 600px) {
+            .closing-container { padding: 30px; margin: 20px; }
+            h2 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="closing-bg">
+        <div class="plumpungan-watermark"></div>
+    </div>
+
+    <div class="closing-container">
+        <div class="tugu-icon-small">🏙️</div>
+        
+        <h2>Kata Penutup</h2>
+        
+        <div class="closing-text">
+            <p>
+                Sinergi adalah kunci dari keberhasilan sebuah mimpi besar. <strong>Salatiga Semua Run 2027</strong> bukan sekadar tentang garis finish atau medali, melainkan tentang bagaimana kita secara kolektif merayakan sejarah, kesehatan, dan potensi luar biasa Kota Salatiga di usianya yang ke-1277 tahun.
+            </p>
+            <br>
+            <p>
+                Kami percaya bahwa kehadiran Bapak/Ibu sebagai mitra strategis akan memberikan nilai tambah yang luar biasa, tidak hanya bagi kesuksesan acara ini, namun juga bagi perkembangan citra positif brand Anda di mata masyarakat luas.
+            </p>
+        </div>
+
+        <div class="quote-box">
+            "Berlari bersama untuk kota tercinta, mengukir prestasi dalam balutan tradisi Plumpungan."
+        </div>
+
+        <div class="hopes-section">
+            <h3>Harapan Kami:</h3>
+            <ul class="hopes-list">
+                <li>Menjadikan Salatiga sebagai destinasi Sport Tourism unggulan di Jawa Tengah.</li>
+                <li>Membangun ekosistem gaya hidup sehat yang berkelanjutan bagi warga kota.</li>
+                <li>Menciptakan momentum kolaborasi yang saling menguntungkan bagi para pelaku industri dan pemerintah.</li>
+                <li>Memberikan pengalaman lari yang tak terlupakan bagi setiap peserta di jalur bersejarah kita.</li>
+            </ul>
+        </div>
+
+        <div class="closing-text" style="text-align: center;">
+            <p>Besar harapan kami untuk dapat mendiskusikan peluang kolaborasi ini lebih lanjut. Terimakasih atas waktu, perhatian, dan dukungan yang Bapak/Ibu berikan.</p>
+        </div>
+
+        <div class="signature-final">
+            <p>Salam Olahraga, Salam Budaya,</p>
+            <p style="margin-top: 20px; font-size: 1.2rem; color: var(--sky-dark);"><strong>Panitia Pelaksana</strong></p>
+            <p>Salatiga Semua Run 2027</p>
+        </div>
+
+        <a href="#" class="btn-home" onclick="window.close();">Kembali ke Beranda</a>
+    </div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Kesepakatan Sponsorship - Salatiga Semua Run 2027</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-dark: #0277BD;
+            --sky-main: #29B6F6;
+            --sky-light: #E1F5FE;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--sky-light);
+            padding: 40px 20px;
+        }
+
+        .agreement-paper {
+            background: white;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            border-top: 10px solid var(--sky-dark);
+        }
+
+        /* Watermark Batik Plumpungan */
+        .agreement-paper::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(var(--sky-main) 10%, transparent 11%);
+            background-size: 50px 50px;
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .header-agreement {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        .header-agreement h1 {
+            color: var(--sky-dark);
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .info-section {
+            margin-bottom: 30px;
+        }
+
+        .info-section h3 {
+            background: var(--sky-light);
+            padding: 10px;
+            color: var(--sky-dark);
+            font-size: 1rem;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            width: 200px;
+            font-weight: 600;
+        }
+
+        .form-group .dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #999;
+            height: 20px;
+        }
+
+        .terms-list {
+            font-size: 0.9rem;
+            padding-left: 20px;
+            color: #555;
+        }
+
+        .terms-list li {
+            margin-bottom: 10px;
+        }
+
+        .signature-area {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+            gap: 50px;
+        }
+
+        .signature-box {
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stamp-area {
+            border: 1px dashed #ccc;
+            width: 100px;
+            height: 60px;
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: #999;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .agreement-paper { box-shadow: none; border: 1px solid #eee; }
+            .no-print { display: none; }
+        }
+
+        .btn-print {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            background: var(--sky-dark);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-print no-print" onclick="window.print()">Cetak / Simpan PDF</button>
+
+    <div class="agreement-paper">
+        <div class="header-agreement">
+            <h1>Lembar Kesepakatan Sponsorship</h1>
+            <p>Salatiga Semua Run Half Marathon 2027</p>
+        </div>
+
+        <div class="info-section">
+            <p style="margin-bottom: 20px;">Yang bertanda tangan di bawah ini menyatakan kesediaan untuk menjadi mitra pendukung (Sponsor) pada event <strong>Salatiga Semua Run 2027</strong>:</p>
+            
+            <div class="form-group">
+                <label>Nama Perusahaan/Brand</label>
+                <div class="dots"></div>
+            </div>
+            <div class="form-group">
+                <label>Nama Penanggung Jawab</label>
+                <div class="dots"></div>
+            </div>
+            <div class="form-group">
+                <label>Jabatan</label>
+                <div class="dots"></div>
+            </div>
+            <div class="form-group">
+                <label>Alamat Kantor</label>
+                <div class="dots"></div>
+            </div>
+            <div class="form-group">
+                <label>Kontak / WhatsApp</label>
+                <div class="dots"></div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>PAKET KEMITRAAN YANG DIPILIH</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px;">
+                <label><input type="checkbox"> Platinum Partner</label>
+                <label><input type="checkbox"> Gold Partner</label>
+                <label><input type="checkbox"> Silver Partner</label>
+            </div>
+            <div class="form-group" style="margin-top: 15px;">
+                <label>Nilai Investasi (Rp)</label>
+                <div class="dots"></div>
+            </div>
+            <div class="form-group">
+                <label>Bentuk Kompensasi Tambahan (Jika In-Kind/Barter)</label>
+                <div class="dots"></div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>SYARAT & KETENTUAN UMUM</h3>
+            <ul class="terms-list">
+                <li>Pembayaran tahap pertama (Down Payment) sebesar 50% dilakukan maksimal 7 hari setelah penandatanganan kesepakatan ini.</li>
+                <li>Pelunasan sisa pembayaran dilakukan paling lambat 14 hari sebelum hari pelaksanaan event (27 Juni 2027).</li>
+                <li>Materi publikasi (Logo) harus dikirimkan dalam format vektor (High Resolution) ke email panitia paling lambat 30 hari sebelum event.</li>
+                <li>Hal-hal detail mengenai teknis aktivasi brand di lapangan akan dibahas pada lampiran Technical Meeting Sponsorship.</li>
+            </ul>
+        </div>
+
+        <div class="signature-area">
+            <div class="signature-box">
+                <p>Pihak Pertama,<br><strong>Panitia Salatiga Semua Run</strong></p>
+                <div class="stamp-area">Materai 10.000</div>
+                <p>( .................................. )</p>
+            </div>
+            <div class="signature-box">
+                <p>Pihak Kedua,<br><strong>Sponsor Partner</strong></p>
+                <div style="height: 60px;"></div>
+                <p>( .................................. )</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; font-size: 0.8rem; color: #999; margin-top: 50px;">
+            Kesepakatan ini dibuat dua rangkap untuk dipegang oleh masing-masing pihak.
+        </p>
+    </div>
+
+    <p class="no-print" style="text-align: center; margin-top: 20px; color: var(--sky-dark); font-size: 0.9rem;">
+        &larr; <a href="javascript:history.back()" style="color: inherit;">Kembali ke Halaman Proposal</a>
+    </p>
+
+</body>
+</html>
